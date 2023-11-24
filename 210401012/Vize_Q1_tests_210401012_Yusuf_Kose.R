@@ -1,8 +1,13 @@
-#Test 1.1) 
 library(testthat)
+current_dir <- getwd()
+print(current_dir)
+relative_path <- file.path(current_dir, "Vize_Q1_210401012_Yusuf_Kose.R")
+source(relative_path)
 
+
+#Test 1.1) 
 testthat::test_that("Global Workspace???de spotify_token adl?? bir de??i??ken olmal??.", {
-  expect_true(exists("spotify_token", envir = .GlobalEnv))
+  expect_true(exists("spotify_token", envir = .GlobalEnv),T)
 })
 
 
